@@ -14,3 +14,9 @@ Completed user stories:
 
 Notes: A large amount of time was spent on overcoming usage hiccups with regard to using a Mac and XCode for the first time. This was further complicated by the fact that I was not using my own computer for development. However, I do like the experience I had using a Mac and XCode. It confirmed my previous plan to buy a MacBook over Spring Break.
 
+Walkthrough Gif
+
+
+![Alt text](https://github.com/hassank/tipster/blob/master/Desktop/tipster/tipster.gif "Walkthrough Gif")
+
+Created with LiceCap
