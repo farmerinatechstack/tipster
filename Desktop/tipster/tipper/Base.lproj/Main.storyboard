@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="HomeViewController" customModule="tipper" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Q1t-rp-doX">
+                                <rect key="frame" x="37" y="194" width="96" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yBM-KP-I6v">
+                                <rect key="frame" x="37" y="237" width="96" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$200.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="f4a-fX-hy2">
+                                <rect key="frame" x="170" y="237" width="113" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$100.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LWV-6p-MjF">
+                                <rect key="frame" x="141" y="194" width="142" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bill Amount:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Cdd-Kg-80S">
+                                <rect key="frame" x="37" y="94" width="125" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="NR4-JQ-c5b">
+                                <rect key="frame" x="170" y="94" width="113" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert"/>
+                                <connections>
+                                    <action selector="onEditingChange:" destination="vXZ-lx-hvc" eventType="editingChanged" id="qld-nr-Pla"/>
+                                </connections>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="mqI-fb-GpX">
+                                <rect key="frame" x="37" y="144" width="225" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="18%"/>
+                                    <segment title="20%"/>
+                                    <segment title="22%"/>
+                                </segments>
+                                <color key="tintColor" red="0.1160630867560512" green="0.61016049592391308" blue="0.27975138953252798" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="onEditingChange:" destination="vXZ-lx-hvc" eventType="valueChanged" id="Qzk-Jz-SVL"/>
+                                </connections>
+                            </segmentedControl>
+                            <view opaque="NO" contentMode="scaleToFill" id="MAl-IH-PFz">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tipster" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GRe-Rw-JxJ">
+                                        <rect key="frame" x="108" y="35" width="105" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.38300158730695022" green="0.64242951766304346" blue="0.40067164107371972" alpha="0.58999999999999997" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="5A8CB76A-BE55-4BB0-AFF3-A286CBA1EB56" id="ehL-uB-DX4">
+                                <rect key="frame" x="270" y="150" width="13" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.11444516519087856" green="0.59217554209183676" blue="0.11160787052883682" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.73616899597016561" green="0.96807238520408168" blue="0.72208651469763985" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="0Qw-rD-cbv" appends="YES" id="hz8-Rv-qWM"/>
+                            <outletCollection property="gestureRecognizers" destination="wY2-us-fyZ" appends="YES" id="zcu-Ue-35C"/>
+                            <outletCollection property="gestureRecognizers" destination="bxa-i1-p4J" appends="YES" id="YSR-5h-4cg"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" id="MFz-es-8S5">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="APp-9g-ESt">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Yao-QP-5uJ">
+                                <rect key="frame" x="-23" y="-15" width="71" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="billField" destination="NR4-JQ-c5b" id="qLU-yV-tpd"/>
+                        <outlet property="billHeader" destination="Cdd-Kg-80S" id="FWb-55-xGR"/>
+                        <outlet property="tipHeader" destination="Q1t-rp-doX" id="F7A-Wv-xKT"/>
+                        <outlet property="tipLabel" destination="LWV-6p-MjF" id="JQ4-yw-cnI"/>
+                        <outlet property="tipsSegment" destination="mqI-fb-GpX" id="jq3-5e-8Ss"/>
+                        <outlet property="tipsterTitle" destination="GRe-Rw-JxJ" id="DRN-oH-V45"/>
+                        <outlet property="totalHeader" destination="yBM-KP-I6v" id="Cg9-Sz-O1t"/>
+                        <outlet property="totalLabel" destination="f4a-fX-hy2" id="U4N-LD-xGu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="0Qw-rD-cbv">
+                    <connections>
+                        <action selector="onTap:" destination="vXZ-lx-hvc" id="M7c-Yw-XzM"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="wY2-us-fyZ"/>
+                <tapGestureRecognizer id="bxa-i1-p4J"/>
+            </objects>
+            <point key="canvasLocation" x="1791" y="385"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="CHb-wG-cQq">
+            <objects>
+                <viewController id="dv8-gb-93f" customClass="SettingsViewController" customModule="tipper" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2J4-u0-U6O">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hIP-94-YXC">
+                                <rect key="frame" x="117" y="20" width="86" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="EPb-0Q-2tZ">
+                                <rect key="frame" x="24" y="22" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="&lt;">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="vXZ-lx-hvc" kind="modal" modalTransitionStyle="flipHorizontal" id="kGT-jp-05A"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="KBu-8W-lAg">
+                                <rect key="frame" x="37" y="115" width="246" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="18%"/>
+                                    <segment title="20%"/>
+                                    <segment title="22%"/>
+                                </segments>
+                                <connections>
+                                    <action selector="settingsTipSegmentChanged:" destination="dv8-gb-93f" eventType="valueChanged" id="3Ds-2c-ygO"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Default Tip:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JHh-gr-WlB">
+                                <rect key="frame" x="37" y="86" width="88" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="nIU-5c-741">
+                                <rect key="frame" x="35" y="253" width="250" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="settingsTipSegment" destination="KBu-8W-lAg" id="gTg-fV-gR2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h9G-BF-y4D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2251" y="385"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="5A8CB76A-BE55-4BB0-AFF3-A286CBA1EB56" width="32" height="32">
+            <mutableData key="keyedArchiveRepresentation">
+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
+AAAAAAAAAAAsUmVmZXJlbmNlIFZpZXdpbmcgQ29uZGl0aW9uIGluIElFQzYxOTY2LTIuMQAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAdmlldwAAAAAAE6T+ABRfLgAQzxQAA+3MAAQTCwADXJ4AAAABWFlaIAAA
+AAAATAlWAFAAAABXH+dtZWFzAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAACjwAAAAJzaWcgAAAAAENS
+VCBjdXJ2AAAAAAAABAAAAAAFAAoADwAUABkAHgAjACgALQAyADcAOwBAAEUASgBPAFQAWQBeAGMAaABt
+AHIAdwB8AIEAhgCLAJAAlQCaAJ8ApACpAK4AsgC3ALwAwQDGAMsA0ADVANsA4ADlAOsA8AD2APsBAQEH
+AQ0BEwEZAR8BJQErATIBOAE+AUUBTAFSAVkBYAFnAW4BdQF8AYMBiwGSAZoBoQGpAbEBuQHBAckB0QHZ
+AeEB6QHyAfoCAwIMAhQCHQImAi8COAJBAksCVAJdAmcCcQJ6AoQCjgKYAqICrAK2AsECywLVAuAC6wL1
+AwADCwMWAyEDLQM4A0MDTwNaA2YDcgN+A4oDlgOiA64DugPHA9MD4APsA/kEBgQTBCAELQQ7BEgEVQRj
+BHEEfgSMBJoEqAS2BMQE0wThBPAE/gUNBRwFKwU6BUkFWAVnBXcFhgWWBaYFtQXFBdUF5QX2BgYGFgYn
+BjcGSAZZBmoGewaMBp0GrwbABtEG4wb1BwcHGQcrBz0HTwdhB3QHhgeZB6wHvwfSB+UH+AgLCB8IMghG
+CFoIbgiCCJYIqgi+CNII5wj7CRAJJQk6CU8JZAl5CY8JpAm6Cc8J5Qn7ChEKJwo9ClQKagqBCpgKrgrF
+CtwK8wsLCyILOQtRC2kLgAuYC7ALyAvhC/kMEgwqDEMMXAx1DI4MpwzADNkM8w0NDSYNQA1aDXQNjg2p
+DcMN3g34DhMOLg5JDmQOfw6bDrYO0g7uDwkPJQ9BD14Peg+WD7MPzw/sEAkQJhBDEGEQfhCbELkQ1xD1
+ERMRMRFPEW0RjBGqEckR6BIHEiYSRRJkEoQSoxLDEuMTAxMjE0MTYxODE6QTxRPlFAYUJxRJFGoUixSt
+FM4U8BUSFTQVVhV4FZsVvRXgFgMWJhZJFmwWjxayFtYW+hcdF0EXZReJF64X0hf3GBsYQBhlGIoYrxjV
+GPoZIBlFGWsZkRm3Gd0aBBoqGlEadxqeGsUa7BsUGzsbYxuKG7Ib2hwCHCocUhx7HKMczBz1HR4dRx1w
+HZkdwx3sHhYeQB5qHpQevh7pHxMfPh9pH5Qfvx/qIBUgQSBsIJggxCDwIRwhSCF1IaEhziH7IiciVSKC
+Iq8i3SMKIzgjZiOUI8Ij8CQfJE0kfCSrJNolCSU4JWgllyXHJfcmJyZXJocmtyboJxgnSSd6J6sn3CgN
+KD8ocSiiKNQpBik4KWspnSnQKgIqNSpoKpsqzysCKzYraSudK9EsBSw5LG4soizXLQwtQS12Last4S4W
+Lkwugi63Lu4vJC9aL5Evxy/+MDUwbDCkMNsxEjFKMYIxujHyMioyYzKbMtQzDTNGM38zuDPxNCs0ZTSe
+NNg1EzVNNYc1wjX9Njc2cjauNuk3JDdgN5w31zgUOFA4jDjIOQU5Qjl/Obw5+To2OnQ6sjrvOy07azuq
+O+g8JzxlPKQ84z0iPWE9oT3gPiA+YD6gPuA/IT9hP6I/4kAjQGRApkDnQSlBakGsQe5CMEJyQrVC90M6
+Q31DwEQDREdEikTORRJFVUWaRd5GIkZnRqtG8Ec1R3tHwEgFSEtIkUjXSR1JY0mpSfBKN0p9SsRLDEtT
+S5pL4kwqTHJMuk0CTUpNk03cTiVObk63TwBPSU+TT91QJ1BxULtRBlFQUZtR5lIxUnxSx1MTU19TqlP2
+VEJUj1TbVShVdVXCVg9WXFapVvdXRFeSV+BYL1h9WMtZGllpWbhaB1pWWqZa9VtFW5Vb5Vw1XIZc1l0n
+XXhdyV4aXmxevV8PX2Ffs2AFYFdgqmD8YU9homH1YklinGLwY0Njl2PrZEBklGTpZT1lkmXnZj1mkmbo
+Zz1nk2fpaD9olmjsaUNpmmnxakhqn2r3a09rp2v/bFdsr20IbWBtuW4SbmtuxG8eb3hv0XArcIZw4HE6
+cZVx8HJLcqZzAXNdc7h0FHRwdMx1KHWFdeF2Pnabdvh3VnezeBF4bnjMeSp5iXnnekZ6pXsEe2N7wnwh
+fIF84X1BfaF+AX5ifsJ/I3+Ef+WAR4CogQqBa4HNgjCCkoL0g1eDuoQdhICE44VHhauGDoZyhteHO4ef
+iASIaYjOiTOJmYn+imSKyoswi5aL/IxjjMqNMY2Yjf+OZo7OjzaPnpAGkG6Q1pE/kaiSEZJ6kuOTTZO2
+lCCUipT0lV+VyZY0lp+XCpd1l+CYTJi4mSSZkJn8mmia1ZtCm6+cHJyJnPedZJ3SnkCerp8dn4uf+qBp
+oNihR6G2oiailqMGo3aj5qRWpMelOKWpphqmi6b9p26n4KhSqMSpN6mpqhyqj6sCq3Wr6axcrNCtRK24
+ri2uoa8Wr4uwALB1sOqxYLHWskuywrM4s660JbSctRO1irYBtnm28Ldot+C4WbjRuUq5wro7urW7Lrun
+vCG8m70VvY++Cr6Evv+/er/1wHDA7MFnwePCX8Lbw1jD1MRRxM7FS8XIxkbGw8dBx7/IPci8yTrJuco4
+yrfLNsu2zDXMtc01zbXONs62zzfPuNA50LrRPNG+0j/SwdNE08bUSdTL1U7V0dZV1tjXXNfg2GTY6Nls
+2fHadtr724DcBdyK3RDdlt4c3qLfKd+v4DbgveFE4cziU+Lb42Pj6+Rz5PzlhOYN5pbnH+ep6DLovOlG
+6dDqW+rl63Dr++yG7RHtnO4o7rTvQO/M8Fjw5fFy8f/yjPMZ86f0NPTC9VD13vZt9vv3ivgZ+Kj5OPnH
++lf65/t3/Af8mP0p/br+S/7c/23//9IiIyQlWiRjbGFzc25hbWVYJGNsYXNzZXNfEBBOU0JpdG1hcElt
+YWdlUmVwoyYnKF8QEE5TQml0bWFwSW1hZ2VSZXBaTlNJbWFnZVJlcFhOU09iamVjdNIiIyorV05TQXJy
+YXmiKijSIiMtLl5OU011dGFibGVBcnJheaMtKijTMDEJMjM0V05TV2hpdGVcTlNDb2xvclNwYWNlRDAg
+MAAQA4AL0iIjNjdXTlNDb2xvcqI2KNIiIzk6V05TSW1hZ2WiOShfEA9OU0tleWVkQXJjaGl2ZXLRPT5U
+cm9vdIABAAgAEQAaACMALQAyADcARQBLAFQAWwBoAG8AdwB5AH4AgACCAIcAkgCUAJYAmACdAKAAogCk
+AKYAqACtAMQAxgDIHdod3x3qHfMeBh4KHh0eKB4xHjYePh5BHkYeVR5ZHmAeaB51HnoefB5+HoMeix6O
+HpMemx6eHrAesx64AAAAAAAAAgEAAAAAAAAAPwAAAAAAAAAAAAAAAAAAHro
+</mutableData>
+        </image>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
